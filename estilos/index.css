@@ -1,0 +1,450 @@
+.img{/*filtro para las imagenes del carrusel y las de la seccion bienvenida*/
+    filter: brightness(55%);
+}
+
+
+/*slider principal*/
+
+.container-slider{
+   width: 100%;
+   overflow: hidden;
+   position: relative;
+}
+
+.slider{
+    display: flex;
+    width: 300%;
+    height: auto;
+    margin-left: -100%;
+}
+
+.slider_section{
+    width: 100%;
+}
+
+.slider_img{
+    display: block;
+    width: 100%;
+    max-height: 600px;
+    object-fit: cover;
+}
+
+.slider_btn{
+    position: absolute;
+    display: flex;
+    color: rgba(255, 255, 255,.5);
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.slider_btn:hover{
+    color: white;
+    transition: 2s;
+    font-size: 35px;
+
+}
+.slider_btn-rigth{
+    right: 5%;
+}
+
+.slider_btn-left{
+    left: 5%;
+}
+
+
+/*Seccion bienvenida*/
+
+.section_bienvenida{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cartel-bienvenida{
+    position: relative;
+}
+
+.contenedor-img{
+   display: flex;
+   flex-direction: column;
+   width: 50%;
+   margin: 1rem 0;
+}
+
+.contenedor-img img{
+    width: 100%;
+    height: 50%;
+    border-radius: 20px;
+    margin: 1rem 0;    
+}
+
+.section_bienvenida p{
+    font-size: 1rem;
+    padding: .7rem;
+    text-align: center;
+    border-radius: 15px;
+    margin: 1rem .5rem;
+    background-color: aliceblue;
+    position: absolute;
+    top: 0;
+    left: 40%;
+    -webkit-box-shadow: 5px 5px 28px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 5px 28px -6px rgba(0,0,0,0.75);
+    box-shadow: 5px 5px 28px -6px rgba(0,0,0,0.75);
+}
+
+
+/*Seccion habitaciones*/
+.section-habitaciones{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(238, 231, 231,.6);
+}
+
+.section-habitaciones p{
+    width: 90%;
+    text-align: center;
+}
+
+
+/*carrusel hab*/
+
+.section-habitaciones .carousel{
+    width: 100%;
+}
+
+.section-habitaciones .carousel-item{
+    width: 100%;
+}
+
+.carousel-item img{
+    object-fit: cover;
+    max-height: 220px;
+}
+
+
+.carousel-caption{
+    background-color: rgba(36, 33, 33, 0.3);
+}
+
+
+/*Seccion Servicios*/
+
+.servicios-section h1 {
+    text-align: center;
+    margin-bottom: 0;
+    /*background-color: rgb(238, 231, 231);*/
+    margin: 0;
+}
+
+.servicios-section h6 {
+    text-align: center;
+    padding-bottom: 0;
+    margin-top: 0.8rem; 
+}
+
+
+
+.servicios-parte1, .servicios-parte2, .servicios-parte3 {
+    display: flex;
+    /*border: solid 2px red;*/
+    max-height: 200px;
+    justify-content: center;
+    margin-top: 1rem; /*    VER ESTOS DOS*/
+    margin-bottom: 1rem; 
+}
+
+hr {
+    background-color: #8f22c2;
+    height: 2px;
+    width: 40%;   
+}
+
+.desayuno, .heladera, .comedor, .microondas, .wifi, .servicio-de-cama {
+    /*border: 2px solid red;*/
+    width: 49%;
+    margin-left: 0.8rem;
+}
+
+.info-desayuno, .info-heladera, .info-comedor, .info-microondas, .info-wifi, .info-cama {
+    display: flex;
+}
+
+.desayuno img, .heladera img, .comedor img, .microondas img, .wifi img, .servicio-de-cama img {
+    width: 28px;
+    height: 28px;
+    /*border: 2px solid violet; */
+    margin-right: 0.4rem;
+}
+
+.p1 {
+    font-size: 1rem;
+    color: #8f22c2;
+    font-weight: bold;
+    margin-bottom: 0.1rem;
+}
+
+.p2 {
+    font-size: 0.7rem;
+}
+
+
+
+
+/*Seccion Servicios Adicionales*/
+.servicios-adicionales h1 {
+    /*border: 2px solid red;*/
+    background-color:rgb(238, 231, 231,.6);
+    text-align: center;
+    padding: 1rem;
+    margin: 0;    
+}
+
+.contenedor-img-masajes {
+    position: relative;
+    display: block;
+}
+
+.contenedor-img-masajes img {
+    /*border: solid green 2px;*/
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.titulo1,  .titulo2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.2rem;
+    color: aliceblue;
+}
+
+.texto-masajes {
+    /*border: 2px solid red;*/
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    bottom: 10px;
+    width: 50%;
+    color: #cfcaca;
+    text-align: center;
+    font-size: 0.8rem;
+    padding: .5rem;
+    letter-spacing: 2px;
+}
+
+.contenedor-img-sauna {
+    position: relative;
+}
+
+.contenedor-img-sauna img {
+    /*border: solid green 2px;*/
+    width: 100%;
+    object-fit: cover;
+}
+
+.texto-sauna {
+    /*border: 2px solid red;*/
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    width: 50%;
+    color: #cfcaca;
+    text-align: center;
+    font-size: 0.8rem;
+    padding: .5rem;
+    letter-spacing: 3px;
+}
+
+.servicios-adicionales{
+    margin-bottom: 0;
+}
+
+
+
+
+
+/*medias queris*/
+
+@media screen and (min-width: 405px) {
+    /*seccion bienvenida*/
+    .cartel-bienvenida{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .contenedor-img{
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .contenedor-img img{
+        width: 45%;
+        margin: .5rem; 
+        align-items: center;
+        justify-content: center;   
+    }
+    
+    
+    .section_bienvenida p{
+        width: 90%;
+        margin: 0;
+        position: static;
+    }  
+
+    /*seccion habitaciones carrusel*/
+    .section-habitaciones .carousel{
+        width: 90%;
+    }
+
+    .carousel-item img{
+        object-fit: cover;
+        max-height: 245px;
+    }
+    
+}
+
+
+
+@media screen and (min-width: 552px) {
+    .servicios h6 {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+
+.servicios-parte1, .servicios-parte2, .servicios-parte3 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+    .desayuno, .heladera, .comedor, .microondas, .wifi, .servicio-de-cama {
+        width: 40%;
+    }
+    
+    .desayuno img, .heladera img, .comedor img, .microondas img, .wifi img, .servicio-de-cama img {
+        width: 3rem;
+        height: 3rem;
+    }
+    .p1 {
+        font-size: 120%;
+        margin-left: 1rem;
+    }
+
+    .p2 {
+        font-size: 80%;
+        margin-left: 1rem;
+    }
+
+     /*seccion habitaciones carrusel*/
+    .carousel-item img{
+        max-height: 360px;
+    }
+   
+}
+
+
+@media screen and (min-width: 700px){  
+    .contenedor-img-masajes img, .contenedor-img-sauna img{
+        height: 350px;      
+    }
+    .titulo1,  .titulo2{
+        font-size: 1.7rem;
+    }
+    .texto-masajes, .texto-sauna{
+        font-size: 1rem;
+    }
+
+    /*seccion habitaciones carrusel*/
+    .carousel-item img{
+        max-height: 473px;
+    }
+}
+
+
+@media screen and (min-width: 850px) {
+    .servicios h6 {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+    .servicios-parte1, .servicios-parte2, .servicios-parte3 {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    .desayuno, .heladera, .comedor, .microondas, .wifi, .servicio-de-cama {
+        width: 40%;
+    }
+    .desayuno img, .heladera img, .comedor img,.microondas img, .wifi img, .servicio-de-cama img
+     {
+        width: 3rem;
+        height: 3rem;
+    } 
+    .p1 {
+        font-size: 140%;
+        margin-left: 1rem;
+    }
+    .p2 {
+        font-size: 110%;
+        margin-left: 1rem;
+    }
+    
+}
+
+
+@media screen and (min-width: 900px){
+    .contenedor-img-masajes img, .contenedor-img-sauna img{
+       height: 550px;       
+    }
+    .titulo1,  .titulo2{
+        font-size: 2.4rem;
+    }
+    .texto-masajes, .texto-sauna{
+        font-size: 1.2rem;
+    }
+
+
+    /*Seccion bienvenida*/
+    .section_bienvenida p{
+        width: 85%;
+        font-size: 1.5rem;
+        padding: 1rem;   
+    }  
+
+    /*Seccion habitaciones*/
+    .section-habitaciones p {
+        width: 80%;
+        font-size: 1.5rem;
+        margin: 1rem;
+    }
+   
+    
+    /*seccion habitaciones carrusel*/
+    .section-habitaciones .carousel{
+        width: 70%;
+    }
+
+    .carousel-item img{
+        object-fit: cover;
+        max-height: 500px;
+    }
+
+    .carousel-caption h4{
+        letter-spacing: 3px;
+    }
+}
+
+
+
+
+
+
+

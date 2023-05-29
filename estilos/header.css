@@ -1,0 +1,176 @@
+/*Header*/
+header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center; 
+    position:sticky;
+    top:0px;
+    background-color: rgb(106, 9, 125,.9);
+    z-index: 3;   
+}
+
+/*Navegation*/
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo img {
+    width: 9rem;
+    height: 4rem;
+}
+
+.bar-btn {
+    color: white;
+    font-size: 2rem;
+    cursor:pointer;
+}
+
+.nav-menu {
+    width: 100%;
+    height: 0vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 80px;
+    position: fixed;
+    list-style: none;
+    background-color:rgb(106, 9, 125,.6);
+    text-align: center;
+}
+
+.nav-menu li {
+    display: none;
+    padding: 1.5rem;
+    transition: all .4s;/*Efecto mas suave cuando aparece el nav, da el efecto como que se desplega de arriba*/   
+}
+
+.nav-menu li:hover {
+    transform: scale(1.1,1.1);
+}
+
+.nav-menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase; /*Para poner todo el texto en mayuscula*/
+    letter-spacing: 3px;
+}
+
+
+.nav-menu li a:hover {
+    font-weight: 100;
+    color:rgb(231, 225, 231);
+    transition: .3s; /*Efecto para que cambie de color mas sueve*/     
+}
+
+#check {
+    display: none;/*Para ocultar el checkbox*/
+}
+
+#check:checked ~ .nav-menu {
+    height: 60vh;
+}
+
+#check:checked ~ .nav-menu li {
+    display: block; 
+}
+
+#check:checked ~ .nav-menu li:hover {
+    background-color: rgba(177, 104, 245, 0.5);
+    transition: .9s;
+    box-shadow:  5px 5px 30px rgb(138, 43, 226, .6);
+    padding: 1rem;
+}
+
+
+/*Media Queri*/
+
+@media screen and (min-width:460px) {
+    
+    .nav-menu li a{
+        font-size: 1.4rem;
+    }  
+}
+
+@media screen and (min-width:890px) {
+
+    .logo{
+        margin-left: 2rem;
+    }
+
+    .logo img{
+        width: 8rem;
+        height: 4rem;
+    }
+
+    header{
+        height: auto;
+    }
+    
+    nav{
+        justify-content: space-around;
+    }
+
+    .bar-btn{
+        display: none;
+    }
+
+    #check:checked ~ .nav-menu{
+        height: auto;
+     }
+
+    .nav-menu{
+        position: relative; 
+        top: .5rem;
+        width: auto;
+        height: auto;
+        background: none;
+        transition: none;
+        flex-direction: row;  
+    }
+
+    .nav-menu a{
+        position: relative;
+    }
+
+    .nav-menu a::after{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -7px;
+        width: 100%;
+        height: .8px;
+        background: white;
+        border-radius: 5px;
+        transform-origin: right;
+        transform: scaleX(0);
+        transition: transform .5s;
+    }
+
+    .nav-menu a:hover::after {
+        transform-origin: left;
+        transform: scaleX(1);
+    }
+
+    #check:checked ~ .nav-menu li:hover{
+        background: none;
+        transition: none;
+        box-shadow:none;
+        padding: 1rem;
+    }
+
+    .nav-menu li{
+        display: inline-block;
+        transition: none;
+        padding: 1rem;
+        letter-spacing: 3px;
+    }
+
+    .nav-menu li a{
+        font-size: 1rem;
+    }
+}

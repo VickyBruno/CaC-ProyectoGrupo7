@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+main {
+    animation-name: cambiarColor;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    /*animation-delay: 2s;
+    /*background-color: rgba(228, 215, 228, 0.944);*/
+   
+}
+
+@keyframes cambiarColor{
+    /*from {background-color: rgb(241, 235, 247);}
+    to {background-color: rgb(234, 182, 246);}*/
+   100% {background-color: rgb(238, 231, 231);}
+    66% {background-color: rgb(215, 147, 237);}
+    33% {background-color: rgb(219, 160, 238);}
+    0% {background-color: rgb(238, 231, 231);}
+}
+
+
+h1 {
+   padding-top: 1.8rem;
+   text-align: center;
+   /*border: solid 2px yellow;*/
+}
+
+.fotos {
+    /*border: 2px solid green;*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem; 
+    padding: 2rem 1.5rem 3rem;
+    margin: 0;  
+}
+
+
+.fotos img{
+    width: 250px; 
+    height: 250px;
+    /*border: solid 2px red;*/
+    border-radius: 2%;
+    object-fit: cover;
+    filter: brightness(85%);
+
+     
+}
+
+
+main img:hover:nth-child(odd) {
+    transform: rotate(1.2deg) scale(1.1,1.1);
+    transition: 1ms ease-out;
+    
+}
+
+main img:hover:nth-child(even) {
+    transform: rotate(-1.2deg) scale(1.1,1.1);
+    transition: 1ms ease-in;
+    
+}
+
+
+#cartel {
+    animation:shadow-inset-center 0.4s linear both;
+    width: 250px; 
+    height: 250px;   
+    z-index: 1;
+  /*  border: 2px solid black;
+    border-radius: 0%;*/
+    
+}
+
+
+@media screen and (min-width: 450px){
+    .fotos img{
+        width: 300px; 
+        height: 300px;
+        gap: 0.8rem;
+        margin-top: 1rem;
+    }
+    #cartel{
+        width: 300px; 
+        height: 300px;
+        gap: 0.8rem;
+        margin-top: 1rem;
+    }
+}
+@media screen and (min-width: 650px) {
+    .fotos img {
+        width: 350px; 
+        height: 350px;
+        margin-left: 2px;
+        margin-right: 2px;
+   }
+   #cartel{
+        width: 350px; 
+        height: 350px;
+        margin-left: 2px;
+        margin-right: 2px;
+   }
+
+}
+    
+@media screen and (min-width: 950px) {
+    .fotos img {
+        width: 375px; 
+        height: 375px;
+   }
+   #cartel{
+        width: 375px; 
+        height: 375px;
+   }
+}
